@@ -1,0 +1,38 @@
+.Sidebar-Container {
+  width: 25vw;
+  background-color: white;
+}
+
+hr {
+  color: #ab9f9f;
+}
+
+.box-parent {
+  max-width: 100%;
+}
+
+.row1 div {
+  width: 80px;
+  height: 80px;
+  background-color: rgb(238 237 238);
+  margin: 5px;
+  border-radius: 5px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.row2 div {
+  width: 80px;
+  height: 80px;
+  background-color: rgb(238 237 238);
+  margin: 5px;
+  border-radius: 5px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.text-muted {
+  font-size: 12px;
+}

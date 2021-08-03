@@ -1,25 +1,51 @@
-import logo from './logo.svg';
-import './App.css';
+import Navbar from "./Navbar/Navbar";
+import Cards from "./Cards/Cards";
+import SideBar from "./Sidebar/Sidebar";
+import "./App.css";
 
-function App() {
-  return (
-    <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.js</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
-      </header>
-    </div>
-  );
+import withFirebaseAuth from "react-with-firebase-auth";
+import firebase from "firebase/app";
+import "firebase/auth";
+import firebaseConfig from "./firebaseConfig";
+
+if (!firebase.apps.length) {
+  var firebaseApp = firebase.initializeApp(firebaseConfig);
+} else {
+  firebase.app();
 }
 
-export default App;
+const firebaseAppAuth = firebaseApp.auth();
+const providers = {
+  googleProvider: new firebase.auth.GoogleAuthProvider(),
+};
+
+const App = (props) => {
+  const { user, signOut, signInWithGoogle } = props;
+
+  return (
+    <div>
+      <Navbar signout={signOut} user={user} />
+      {user ? (
+        <div className="App-Bar">
+          <Cards />
+          <SideBar />
+        </div>
+      ) : (
+        <div className="signin-button">
+          <button
+            type="button"
+            className="btn btn-dark"
+            onClick={signInWithGoogle}
+          >
+            Sign in with Google
+          </button>
+        </div>
+      )}
+    </div>
+  );
+};
+
+export default withFirebaseAuth({
+  providers,
+  firebaseAppAuth,
+})(App);

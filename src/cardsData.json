@@ -1,0 +1,39 @@
+{
+  "profiles": [
+    {
+      "id": 1,
+      "name": "Henry Paulista",
+      "email": "henry.p@mail.com",
+      "pos": "SENIOR CREATIVE DIRECTOR",
+      "img": "https://images.unsplash.com/photo-1528892952291-009c663ce843?ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&ixlib=rb-1.2.1&auto=format&fit=crop&w=592&q=80"
+    },
+    {
+      "id": 2,
+      "name": "Evan Jefferson",
+      "email": "jefferson@gmail.com",
+      "pos": "CREATIVE DIRECTOR",
+      "img": "https://images.unsplash.com/photo-1531427186611-ecfd6d936c79?ixlib=rb-1.2.1&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=634&q=80"
+    },
+    {
+      "id": 3,
+      "name": "Mark Thompson",
+      "email": "mark.t@gmail.com",
+      "pos": "SENIOR UI DESIGNER",
+      "img": "https://images.unsplash.com/photo-1525665363629-cdf85a703b50?ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&ixlib=rb-1.2.1&auto=format&fit=crop&w=1782&q=80"
+    },
+    {
+      "id": 4,
+      "name": "Alice McKenzie",
+      "email": "alice.mg@gmail.com",
+      "pos": "SENIOR COPYWRITER",
+      "img": "https://images.unsplash.com/photo-1544005313-94ddf0286df2?ixlib=rb-1.2.1&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=634&q=80"
+    },
+    {
+      "id": 4,
+      "name": "Anastasia Groetz",
+      "email": "anastasia.g@gmail.com",
+      "pos": "SENIOR UX DESIGNER",
+      "img": "https://images.unsplash.com/photo-1521227889351-bf6f5b2e4e37?ixlib=rb-1.2.1&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=625&q=80"
+    }
+  ]
+}

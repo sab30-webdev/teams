@@ -1,0 +1,23 @@
+.main {
+  display: flex;
+}
+
+.user {
+  display: flex;
+}
+
+.user img {
+  width: 34px;
+  height: 34px;
+  border-radius: 50%;
+}
+
+.user h2 {
+  font-size: 23px;
+  margin-right: 5px;
+  margin-top: 3px;
+}
+
+.signout {
+  cursor: pointer;
+}
