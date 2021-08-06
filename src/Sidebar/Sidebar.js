@@ -11,23 +11,23 @@ const SideBar = () => {
       <p className="mx-3 mt-5 fw-bold fs-5 ms-5">Projects</p>
       <div className="container box-parent">
         <div className="row row1">
-          <div className="col-6 ms-5 d-flex flex-column">
+          <div className="col-6 ms-5 d-flex flex-column box">
             <p className="text-muted m-0">Total</p>
-            <p className="fw-bold ">148</p>
+            <p className="fw-bold num">148</p>
           </div>
-          <div className="col-6  d-flex flex-column">
+          <div className="col-6  d-flex flex-column box">
             <p className="text-muted m-0">Completed</p>
-            <p className="fw-bold">56</p>
+            <p className="fw-bold num">56</p>
           </div>
         </div>
         <div className="row row2">
-          <div className="col-6 ms-5 d-flex flex-column">
+          <div className="col-6 ms-5 d-flex flex-column box">
             <p className="text-muted m-0">Progress</p>
-            <p className="fw-bold">76</p>
+            <p className="fw-bold num">76</p>
           </div>
-          <div className="col-6  d-flex flex-column">
+          <div className="col-6  d-flex flex-column box">
             <p className="text-muted m-0">Waiting</p>
-            <p className="fw-bold">16</p>
+            <p className="fw-bold num">16</p>
           </div>
         </div>
       </div>

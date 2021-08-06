@@ -14,12 +14,21 @@
 }
 
 .user h2 {
-  font-size: 23px;
-  margin-right: 5px;
-  margin-top: 6px;
+  font-size: 14px;
+  margin-right: 10px;
+  margin-top: 15px;
+  color: #464646;
 }
 
 .signout {
   cursor: pointer;
   margin-top: 6px;
+}
+
+.date {
+  margin-top: 16px;
+  margin-right: 60px;
+  font-weight: 500;
+  color: #9a9a9a;
+  font-size: 12px;
 }

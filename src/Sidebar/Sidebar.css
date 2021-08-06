@@ -11,7 +11,7 @@ hr {
   max-width: 100%;
 }
 
-.row1 div {
+.box {
   width: 80px;
   height: 80px;
   background-color: rgb(238 237 238);
@@ -22,15 +22,8 @@ hr {
   align-items: center;
 }
 
-.row2 div {
-  width: 80px;
-  height: 80px;
-  background-color: rgb(238 237 238);
-  margin: 5px;
-  border-radius: 5px;
-  display: flex;
-  justify-content: center;
-  align-items: center;
+.box:hover {
+  border: 2px solid dimgray;
 }
 
 .text-muted {
