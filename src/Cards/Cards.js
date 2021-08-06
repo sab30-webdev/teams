@@ -14,7 +14,7 @@ const Cards = () => {
       <div className="search-div">
         <p
           className="ms-3 my-0 all-tab"
-          style={{ position: "relative", top: "16px" }}
+          style={{ position: "relative", top: "16px", cursor: "pointer" }}
         >
           All
         </p>

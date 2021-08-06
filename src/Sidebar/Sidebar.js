@@ -7,7 +7,7 @@ const SideBar = () => {
         <p className="text-muted fw-normal m-0">SELECTED</p>
         <h3 className="fw-bold">Design Team</h3>
       </div>
-      <hr style={{ marginTop: "43px" }} />
+      <hr style={{ marginTop: "60px" }} />
       <p className="mx-3 mt-5 fw-bold fs-5 ms-5">Projects</p>
       <div className="container box-parent">
         <div className="row row1">
