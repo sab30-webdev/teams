@@ -2,34 +2,30 @@ import Navbar from "./Navbar/Navbar";
 import Cards from "./Cards/Cards";
 import SideBar from "./Sidebar/Sidebar";
 import "./App.css";
-
+import { createContext, useState } from "react";
 import withFirebaseAuth from "react-with-firebase-auth";
+import firebaseApp from "./firebase";
 import firebase from "firebase/app";
-import "firebase/auth";
-import firebaseConfig from "./firebaseConfig";
-
-if (!firebase.apps.length) {
-  var firebaseApp = firebase.initializeApp(firebaseConfig);
-} else {
-  firebase.app();
-}
 
 const firebaseAppAuth = firebaseApp.auth();
 const providers = {
   googleProvider: new firebase.auth.GoogleAuthProvider(),
 };
 
-const App = (props) => {
-  const { user, signOut, signInWithGoogle } = props;
+export const UserContext = createContext();
+const App = ({ user, signOut, signInWithGoogle }) => {
+  const [data, setData] = useState({});
 
   return (
-    <div>
+    <>
       <Navbar signout={signOut} user={user} />
       {user ? (
-        <div className="App-Bar">
-          <Cards />
-          <SideBar />
-        </div>
+        <UserContext.Provider value={{ data, setData }}>
+          <div className="App-Bar">
+            <Cards />
+            <SideBar />
+          </div>
+        </UserContext.Provider>
       ) : (
         <div className="signin-button">
           <button
@@ -41,7 +37,7 @@ const App = (props) => {
           </button>
         </div>
       )}
-    </div>
+    </>
   );
 };
 

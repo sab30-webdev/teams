@@ -20,3 +20,16 @@
   object-fit: cover;
   object-position: center right;
 }
+
+.center-plus {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  cursor: pointer;
+  height: 309px;
+}
+
+.center-plus div {
+  font-size: 80px;
+  user-select: none;
+}
