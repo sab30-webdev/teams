@@ -22,7 +22,8 @@ const ProfileDetails = ({ show, close, addData }) => {
       return;
     } else {
       e.preventDefault();
-      addData(profile);
+      let p = { ...profile, des: profile.des.toUpperCase() };
+      addData(p);
       setProfile({});
       close();
     }
@@ -43,6 +44,7 @@ const ProfileDetails = ({ show, close, addData }) => {
                 name="name"
                 onChange={onChange}
                 required
+                autoComplete="off"
               />
             </Form.Group>
             <Form.Group className="mb-3">
@@ -52,16 +54,17 @@ const ProfileDetails = ({ show, close, addData }) => {
                 name="email"
                 onChange={onChange}
                 required
+                autoComplete="off"
               />
             </Form.Group>
             <Form.Group className="mb-3">
               <Form.Control
-                className="text-uppercase"
                 type="text"
                 placeholder="Designation"
                 name="des"
                 onChange={onChange}
                 required
+                autoComplete="off"
               />
             </Form.Group>
             <Form.Group className="mb-3">
@@ -71,6 +74,7 @@ const ProfileDetails = ({ show, close, addData }) => {
                 name="url"
                 onChange={onChange}
                 required
+                autoComplete="off"
               />
             </Form.Group>
           </Modal.Body>

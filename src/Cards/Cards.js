@@ -9,19 +9,29 @@ const Cards = () => {
   const [refresh, setRefresh] = useState(false);
 
   useEffect(() => {
-    db.collection("profiles")
-      .get()
-      .then((snapshot) => {
-        let list = [];
-        snapshot.forEach((doc) => {
-          list.push(doc.data());
+    async function fetchData() {
+      await db
+        .collection("profiles")
+        .get()
+        .then((snapshot) => {
+          let list = [];
+          snapshot.forEach((doc) => {
+            list.push({ ...doc.data(), id: doc.id });
+          });
+          setProfiles(list);
         });
-        setProfiles(list);
-      });
+    }
+    fetchData();
   }, [refresh]);
 
-  function addData(data) {
-    db.collection("profiles").add(data);
+  async function addData(data) {
+    await db.collection("profiles").add(data);
+    setRefresh(!refresh);
+  }
+
+  async function removeData(did) {
+    // did : document Id
+    await db.collection("profiles").doc(did).delete();
     setRefresh(!refresh);
   }
 
@@ -57,7 +67,9 @@ const Cards = () => {
               email={p.email}
               pos={p.des}
               img={p.url}
+              id={p.id}
               key={idx}
+              removeData={removeData}
             />
           ))}
         <Card addData={addData} />

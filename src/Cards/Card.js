@@ -5,11 +5,15 @@ import OverlayTrigger from "react-bootstrap/OverlayTrigger";
 import Tooltip from "react-bootstrap/Tooltip";
 import "./Card.css";
 
-const Card = ({ name, email, pos, img, addData }) => {
+const Card = ({ name, email, pos, img, id, addData, removeData }) => {
   const [show, setShow] = useState(false);
 
   const handleShow = () => setShow(true);
   const handleClose = () => setShow(false);
+
+  const handleDelete = () => {
+    removeData(id);
+  };
 
   return name ? (
     <div className="col-sm-4 ">
@@ -25,7 +29,12 @@ const Card = ({ name, email, pos, img, addData }) => {
             <small className="text-muted">{email}</small>
           </p>
           <hr />
-          <p className="card-text pos text-center p-1 fw-bold">{pos}</p>
+          <p className="card-text pos text-center p-1 mb-3 fw-bold">{pos}</p>
+        </div>
+        <div className="text-center d-grid gap-2">
+          <Button variant="outline-danger" onClick={handleDelete}>
+            Remove X
+          </Button>
         </div>
       </div>
     </div>
