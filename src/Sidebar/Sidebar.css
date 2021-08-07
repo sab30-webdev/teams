@@ -29,3 +29,7 @@ hr {
 .text-muted {
   font-size: 12px;
 }
+
+.progress-container {
+  width: 250px;
+}

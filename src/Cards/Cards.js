@@ -31,8 +31,10 @@ const Cards = () => {
 
   async function removeData(did) {
     // did : document Id
-    await db.collection("profiles").doc(did).delete();
-    setRefresh(!refresh);
+    if (window.confirm("Do you want to remove this profile ?")) {
+      await db.collection("profiles").doc(did).delete();
+      setRefresh(!refresh);
+    }
   }
 
   return (

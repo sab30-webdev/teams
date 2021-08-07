@@ -31,7 +31,7 @@ const SideBar = () => {
           </div>
         </div>
       </div>
-      <div className="m-2 px-2">
+      <div className="m-2 mt-5 mx-auto px-2 progress-container">
         <span className="text-muted fw-bold mb-1">Time Log : 74%</span>
         <div className="progress mt-2">
           <div

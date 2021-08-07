@@ -8,7 +8,7 @@
 
 .pos {
   font-size: 12px;
-  color: #6f6f6f;
+  color: #9b9b9b;
 }
 
 .image--cover {
@@ -29,7 +29,7 @@
   height: 309px;
 }
 
-.center-plus div {
-  font-size: 80px;
+.center-plus Button {
+  font-size: 25px;
   user-select: none;
 }

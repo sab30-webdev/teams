@@ -29,11 +29,13 @@ const Card = ({ name, email, pos, img, id, addData, removeData }) => {
             <small className="text-muted">{email}</small>
           </p>
           <hr />
-          <p className="card-text pos text-center p-1 mb-3 fw-bold">{pos}</p>
+          <p className="card-text pos text-center p-1 mb-3 fw-bold text-muted">
+            {pos}
+          </p>
         </div>
         <div className="text-center d-grid gap-2">
           <Button variant="outline-danger" onClick={handleDelete}>
-            Remove X
+            <ion-icon name="trash-outline"></ion-icon>
           </Button>
         </div>
       </div>
@@ -44,7 +46,7 @@ const Card = ({ name, email, pos, img, id, addData, removeData }) => {
         placement="top"
         overlay={<Tooltip id="tooltip-right">Add Profile</Tooltip>}
       >
-        <Button variant="secondary" className="+" onClick={handleShow}>
+        <Button className="+" onClick={handleShow}>
           +
         </Button>
       </OverlayTrigger>
