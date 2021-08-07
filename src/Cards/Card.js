@@ -35,7 +35,7 @@ const Card = ({ name, email, pos, img, addData }) => {
         placement="top"
         overlay={<Tooltip id="tooltip-right">Add Profile</Tooltip>}
       >
-        <Button variant="primary" className="+" onClick={handleShow}>
+        <Button variant="secondary" className="+" onClick={handleShow}>
           +
         </Button>
       </OverlayTrigger>
